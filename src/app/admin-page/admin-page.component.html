@@ -1,0 +1,52 @@
+<div>
+  <table mdbTable small="true">
+    <thead class="black white-text">
+      <tr>
+        <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let form of ztsForms">
+        <td>{{ form.payload.doc.data().firstName}}</td>
+        <td>{{form.payload.doc.data().middleName}}</td>
+        <td>{{form.payload.doc.data().lastName}}</td>
+        <td>{{form.payload.doc.data().email}}</td>
+        <td>{{form.payload.doc.data().addressOne}}</td>
+        <td>{{form.payload.doc.data().city}}</td>
+        <td>{{form.payload.doc.data().state}}</td>
+        <td>{{form.payload.doc.data().country}}</td>
+        <td>{{form.payload.doc.data().churchLeadership}}</td>
+        <td>{{form.payload.doc.data().englishProficiency}}</td>
+        <td>{{form.payload.doc.data().otherLanguages}}</td>
+        <td>{{form.payload.doc.data().phoneNumber}}</td>
+        <td>{{form.payload.doc.data().gender}}</td>
+        <td>{{form.payload.doc.data().ethnicDetail}}</td>
+        <td>{{form.payload.doc.data().ethnic}}</td>
+        <td>{{form.payload.doc.data().occupation}}</td>
+        <td>{{form.payload.doc.data().maritalStatus}}</td>
+        <td>{{form.payload.doc.data().specialAccomidations}}</td>
+        <td>{{form.payload.doc.data().specialAccomidationsExplain}}</td>
+        <td>{{form.payload.doc.data().previousConviction}}</td>
+        <td>{{form.payload.doc.data().previousConvictionExplain}}</td>
+        <td>{{form.payload.doc.data().DOB}}</td>
+        <td>{{form.payload.doc.data().addressTwo}}</td>
+        <td>{{form.payload.doc.data().denomination}}</td>
+        <td>{{form.payload.doc.data().ChurchName}}</td>
+        <td>{{form.payload.doc.data().countryTwo}}</td>
+        <td>{{form.payload.doc.data().ChurchLocation}}</td>
+        <td>{{form.payload.doc.data().attendanceLength}}</td>
+        <td>{{form.payload.doc.data().statementPurpose}}</td>
+        <td>{{form.payload.doc.data().internetAccess}}</td>
+        <td>{{form.payload.doc.data().refferencePoint}}</td>
+        <td>{{form.payload.doc.data().anyoneStudyingNow}}</td>
+        <td>{{form.payload.doc.data().yearsOfBeingABeliever}}</td>
+        <td>{{form.payload.doc.data().countryCitizenship}}</td>
+        <td>
+          <span *ngFor="let forms of form.payload.doc.data().ztsForms">
+            {{ forms }}
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

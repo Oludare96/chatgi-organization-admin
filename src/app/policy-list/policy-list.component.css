@@ -1,0 +1,19 @@
+.mat-stepper-horizontal {
+  margin-top: 8px;
+}
+
+.mat-form-field {
+  margin-top: 16px;
+}
+
+.mat-form-field-wrapper {
+  position: relative;
+  width: 334px;
+  font-size: 18px;
+}
+
+.inputClass {
+  width: 450px;
+  font-size: 14px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

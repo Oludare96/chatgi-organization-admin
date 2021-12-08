@@ -1,0 +1,146 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    line-height: 2em;
+    letter-spacing: 1px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+section.section {
+    padding: 50px 0;
+}
+
+button {
+    border: 1px white;
+    border-radius: 25px;
+    background-color: lightgray;
+    padding: 5px 30px;
+}
+
+.h1,
+.title {
+    font-family: 'Oswald'!important;
+    text-transform: uppercase;
+    letter-spacing: 4px!important;
+    font-size: 3em!important;
+}
+
+p.feature-p {
+    line-height: 2.2em;
+    letter-spacing: 2px;
+}
+
+.wBtn {
+    background-color: transparent;
+    font-family: 'Oswald';
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 15px 40px!important;
+    color: #444444;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: #444444;
+    transition: 200ms ease-in-out opacity;
+    display: inline-block;
+}
+
+.submitbutton {
+    border: 1px white;
+    border-radius: 25px;
+    background-color: green;
+    padding: 5px 30px;
+    color: #444444;
+}
+
+.wBtn:hover {
+    color: #444444;
+    opacity: .7;
+    text-decoration: none;
+}
+
+.wBtn-icon {
+    width: 20px;
+}
+
+.mat-button.mat-button-base, .mat-raised-button.mat-button-base {
+    padding: 5px 50px;
+}
+
+// Header component
+.header {
+    width: 100%;
+    padding: 20px;
+    background: #283663;
+    color: white;
+}
+
+.header a {
+    color: white;
+}
+
+.header-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-link {
+    padding: 20px;
+    font-family: 'Oswald';
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.5em;
+    opacity: .7;
+}
+
+.header-link:hover {
+    opacity: 1;
+    text-decoration: none;
+}
+
+.header-logo {
+    width: 200px;
+}
+
+// end Header component
+
+.development-navigation { // for dev environment
+    display: none;
+}
+
+.WDCTS-button.mat-raised-button.mat-button-base.mat-primary {
+    background-color: #3a4b83;
+    color: white;
+}
+
+div.mat-horizontal-stepper-header-container {
+    margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 991px) { // mobile-friendly
+    
+    div.mat-horizontal-stepper-header-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+}
+
+
+

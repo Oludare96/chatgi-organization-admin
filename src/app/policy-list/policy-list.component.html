@@ -1,0 +1,318 @@
+<div class="d-flex flex-column" style="height: calc(100vh - 76px);">
+  <section class="w-100 flex-grow-1 pt-4" style="background-color: #eee;">
+
+    <div class="container">
+
+      <div class="row mb-2">
+
+        <div class="card col-md-10 offset-md-1 mb-2">
+
+          <div class="card-body">
+            <mat-horizontal-stepper [linear]="isLinear" #stepper>
+              <mat-step [stepControl]="this.ordersService.form">
+                <form [formGroup]="this.ordersService.form">
+                  <ng-template matStepLabel style="font-size:25px">Personal Information </ng-template>
+
+                  <mat-form-field style="padding-right: 20px;">
+                    <mat-label>First Name</mat-label>
+                    <input matInput placeholder="First name" formControlName="firstName" required>
+                  </mat-form-field>
+
+                  <mat-form-field style="padding-right: 20px;">
+                    <mat-label>Middle Name</mat-label>
+                    <input matInput placeholder="Middle name" formControlName="middleName" required>
+                  </mat-form-field>
+
+                  <mat-form-field>
+                    <mat-label>Last Name</mat-label>
+                    <input matInput placeholder="Last name" formControlName="lastName" required>
+                  </mat-form-field> <br />
+
+                  <mat-form-field class="inputClass">
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="Email" formControlName="email" type="email" ngModel email="true"
+                           required>
+                  </mat-form-field> <br />
+
+                  <mat-form-field class="inputClass">
+                    <mat-label> Address </mat-label>
+                    <input matInput placeholder="1 Main St" formControlName="addressOne" required>
+                  </mat-form-field> <br />
+
+                  <mat-form-field class="inputClass">
+                    <mat-label> City </mat-label>
+                    <input matInput placeholder="Arlington / Town" formControlName="city" required>
+                  </mat-form-field> <br />
+
+                  <mat-form-field class="inputClass">
+                    <mat-label> State </mat-label>
+                    <input matInput placeholder="State" formControlName="state" required>
+                  </mat-form-field> <br />
+
+                  <mat-form-field class="inputClass">
+                    <mat-label>Current Country of Residence</mat-label>
+                    <mat-select formControlName="country" required>
+                      <mat-option value="" selected="selected">(please select a country)</mat-option>
+                      <mat-option value="US">United States</mat-option>
+                      <mat-option value="BZ">Belize</mat-option>
+                      <mat-option value="CL">Chile</mat-option>
+                      <mat-option value="DM">Dominica</mat-option>
+                      <mat-option value="DO">Dominican Republic</mat-option>
+                      <mat-option value="GY">Guyana</mat-option>
+                      <mat-option value="NI">Nicaragua</mat-option>
+                      <mat-option value="PA">Panama</mat-option>
+                      <mat-option value="PE">Peru</mat-option>
+                      <mat-option value="UY">Uruguay</mat-option>
+                      <mat-option value="AR">Argentina</mat-option>
+                      <mat-option value="BO">Bolivia</mat-option>
+                      <mat-option value="CO">Colombia</mat-option>
+                      <mat-option value="CR">Costa Rica</mat-option>
+                      <mat-option value="HN">Honduras</mat-option>
+                      <mat-option value="PY">Paraguay</mat-option>
+                      <mat-option value="VE">Venezuela</mat-option>
+
+                    </mat-select>
+                  </mat-form-field> <br />
+
+                  <mat-form-field class="inputClass">
+                    <mat-label>Current Country of Citizenship </mat-label>
+                    <mat-select formControlName="countryCitizenship" required>
+                      <mat-option value="" selected="selected">(please select a country)</mat-option>
+                      <mat-option value="US">United States</mat-option>
+                      <mat-option value="BZ">Belize</mat-option>
+                      <mat-option value="CL">Chile</mat-option>
+                      <mat-option value="DM">Dominica</mat-option>
+                      <mat-option value="DO">Dominican Republic</mat-option>
+                      <mat-option value="GY">Guyana</mat-option>
+                      <mat-option value="NI">Nicaragua</mat-option>
+                      <mat-option value="PA">Panama</mat-option>
+                      <mat-option value="PE">Peru</mat-option>
+                      <mat-option value="UY">Uruguay</mat-option>
+                      <mat-option value="AR">Argentina</mat-option>
+                      <mat-option value="BO">Bolivia</mat-option>
+                      <mat-option value="CO">Colombia</mat-option>
+                      <mat-option value="CR">Costa Rica</mat-option>
+                      <mat-option value="HN">Honduras</mat-option>
+                      <mat-option value="PY">Paraguay</mat-option>
+                      <mat-option value="VE">Venezuela</mat-option>
+                    </mat-select>
+                  </mat-form-field> <br />
+
+                  <mat-form-field class="inputClass">
+                    <mat-label>Level of Proficiency in English</mat-label>
+                    <mat-select formControlName="englishProficiency" required>
+                      <mat-option value="Limited proficiency ">Limited proficiency </mat-option>
+                      <mat-option value="Adiquate proficiency">Adiquate proficiency </mat-option>
+                      <mat-option value="Professional proficiency">Professional proficiency</mat-option>
+                    </mat-select>
+                  </mat-form-field> <br />
+
+                  <mat-form-field class="inputClass">
+                    <mat-label> Other languages spoken fluently </mat-label>
+                    <input matInput placeholder="Other languages spoken fluently" formControlName="otherLanguages" required>
+                  </mat-form-field> <br />
+                  <mat-form-field class="inputClass">
+                    <mat-label>Date of Birth</mat-label>
+                    <input matInput formControlName="DOB" [matDatepicker]="picker" required>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field> <br />
+
+                  <mat-form-field class="inputClass">
+                    <mat-label> Phone Number (If outside the USA please provide your Whatsapp number) </mat-label>
+                    <input matInput placeholder="Primary Phone Number (If outside the USA please provide your Whatsapp number)" formControlName="phoneNumber" type="number" required>
+                  </mat-form-field> <br />
+
+                  <mat-form-field class="inputClass">
+                    <mat-label>Gender</mat-label>
+                    <mat-select formControlName="gender" none required>
+                      <mat-option value="Male">Male </mat-option>
+                      <mat-option value="Female">Female</mat-option>
+                    </mat-select>
+                  </mat-form-field> <br />
+
+                  <mat-form-field class="inputClass">
+                    <mat-label>Ethnic Details </mat-label>
+                    <mat-select formControlName="ethnicDetail" none required>
+                      <mat-option value="Hispanic or Latino">Hispanic or Latino</mat-option>
+                      <mat-option value="Not Hispanic or Latin">Not Hispanic or Latin</mat-option>
+                    </mat-select>
+                  </mat-form-field> <br />
+
+                  <mat-form-field class="inputClass">
+                    <mat-label>What is your ethnicity (please select one or more that apply)</mat-label>
+                    <mat-select formControlName="ethnic" none required>
+                      <mat-option value="White">White </mat-option>
+                      <mat-option value="Black or African American">Black or African American</mat-option>
+                      <mat-option value="American Indian/Alaska Native">American Indian/Alaska Native</mat-option>
+                      <mat-option value="Asian">Asian</mat-option>
+                      <mat-option value="Native Hawaiian/Pacific Islander">Native Hawaiian/Pacific Islander</mat-option>
+                      <mat-option value="Two or more races">Two or more races</mat-option>
+                      <mat-option value="Prefer not to say">Prefer not to say</mat-option>
+                    </mat-select>
+                  </mat-form-field> <br />
+
+                  <mat-form-field class="inputClass">
+                    <mat-label>Occupation</mat-label>
+                    <input matInput placeholder="Occupation" formControlName="occupation" required>
+                  </mat-form-field> <br />
+
+                  <mat-form-field class="inputClass">
+                    <mat-label>Marital Status</mat-label>
+                    <mat-select formControlName="maritalStatus" required>
+                      <mat-option value="Married">Married </mat-option>
+                      <mat-option value="Single">Single</mat-option>
+                      <mat-option value="Engaged">Engaged</mat-option>
+                      <mat-option value="In a Relationship">In a Relationship</mat-option>
+                      <mat-option value="Separated">Separated</mat-option>
+                      <mat-option value="Divorced">Divorced</mat-option>
+                      <mat-option value="Widowed">Widowed</mat-option>
+                    </mat-select>
+                  </mat-form-field> <br />
+
+                  <mat-form-field style="width:550px;">
+                    <mat-label>Are there any special accommodations that will be needed during the program?</mat-label>
+                    <mat-select formControlName="specialAccomidations" required>
+                      <mat-option value="Yes">Yes </mat-option>
+                      <mat-option value="No">No</mat-option>
+                    </mat-select>
+
+                  </mat-form-field> <br />
+                  <div *ngIf="this.ordersService.form.value.specialAccomidations == 'Yes'">
+                    <textarea class="col-6 " style="height: 100px;" placeholder="If yes please explain. Why we ask: “This is to ensure that we are able to provide an equal opportunity of learning for any and all applicants who are accepted, and for us to know how a student can be best accommodated if possible.”"
+                              formControlName="specialAccomidationsExplain" required> </textarea>
+                  </div>
+
+                  <mat-form-field class="inputClass">
+                    <mat-label>Have you ever been convicted for any criminal offenses?</mat-label>
+                    <mat-select formControlName="previousConviction" required>
+                      <mat-option value="Yes">Yes </mat-option>
+                      <mat-option value="No">No</mat-option>
+                    </mat-select>
+                  </mat-form-field> <br />
+                  <div *ngIf="this.ordersService.form.value.previousConviction == 'Yes'">
+                    <textarea class="col-6 " style="height: 100px;" placeholder="If yes please explain, " formControlName="previousConvictionExplain" required> </textarea>
+                  </div> <br />
+
+                  <div>
+                    <button mat-raised-button class="WDCTS-button" color="primary" matStepperNext>Next</button>
+                  </div>
+                </form>
+              </mat-step>
+
+              <-- Faith and commitment -->
+
+                <mat-step [stepControl]="this.ordersService.form" label="Faith and commitment">
+                  <form [formGroup]="this.ordersService.form">
+
+
+                    <h1> Current Church Information </h1>
+
+                    <mat-form-field class="inputClass">
+                      <mat-label>What is the name of your current church </mat-label>
+                      <input matInput placeholder="Church Name " formControlName="ChurchName" required>
+                    </mat-form-field> <br />
+
+                    <mat-form-field class="inputClass">
+                      <mat-label>What is your role within the church? </mat-label>
+                      <mat-select formControlName="churchRole" required>
+                        <mat-option value="one">Head Pastor </mat-option>
+                        <mat-option value="two">Pastor (Not Head)</mat-option>
+                        <mat-option value="three">Deacon/Deaconess</mat-option>
+                        <mat-option value="forth">Congregation Memeber</mat-option>
+                        <mat-option value="fifth">Other</mat-option>
+                      </mat-select>
+                    </mat-form-field> <br />
+
+                    <mat-form-field class="inputClass">
+                      <mat-label>If you are a head pastor, how many congregation members does your church currently have? (Note: this only includes congregation members ages 18 and up) </mat-label>
+                      <input matInput placeholder="Church Size" formControlName="churchSize" required>
+                    </mat-form-field> <br />
+
+                    <mat-form-field class="inputClass">
+                      <mat-label>With which denomination is your church affiliated?  </mat-label>
+                      <input matInput placeholder="(e.g. Baptist, Presbyterian, Nondenominational, etc.)" formControlName="denomination" required>
+                    </mat-form-field> <br />
+
+                    <mat-form-field class="inputClass">
+                      <mat-label> Location of Current Church (City, Country) </mat-label>
+                      <input matInput placeholder="(City, Country)" formControlName="ChurchLocation" required>
+                    </mat-form-field> <br />
+
+                    <mat-form-field class="inputClass">
+                      <mat-label> How long (in years) have you been affiliated with your church? </mat-label>
+                      <input matInput placeholder="e.g. 3 years" formControlName="attendanceLength" required>
+                    </mat-form-field> <br />
+
+                    <div style="padding-bottom:10px;">
+                      <mat-form-field class="inputClass">
+                        <mat-label> How long have you been a believer? </mat-label>
+                        <input matInput placeholder="Years" formControlName="yearsOfBeingABeliever" required>
+                      </mat-form-field> <br />
+                    </div>
+
+                    <mat-label>
+                      <mat-label>
+                        Please paste a Statement of Purpose (minimum 150 words) demonstrating your commitment to studying through the duration of the program along with your goals and purpose for studying with Washington D.C. Theological Seminary.
+                      </mat-label>
+                      <br /> <br />
+                      <div>
+                        <textarea class="col-12" style="height: 100px;" formControlName="statementPurpose" required> </textarea>
+                      </div>
+
+                    </mat-label>
+                    <div class="mt-4">
+                      <button mat-button matStepperPrevious class="mr-3">Back</button>
+                      <button mat-raised-button class="WDCTS-button" color="primary" matStepperNext>Next</button>
+                    </div>
+                  </form>
+                </mat-step>
+                <mat-step [stepControl]="this.ordersService.form" label="Supplemental Information">
+                  <form [formGroup]="this.ordersService.form">
+                    <div style="padding-top:25px;"></div>
+
+                    <mat-form-field class="inputClass">
+                      <mat-label>Do you have consistent access to the internet?</mat-label>
+                      <mat-select formControlName="internetAccess" required>
+                        <mat-option value="Yes">Yes </mat-option>
+                        <mat-option value="No">No</mat-option>
+                      </mat-select>
+                    </mat-form-field> <br /> <br />
+
+                    <mat-label>How and by whom/what did you hear about us (Please be specific)? </mat-label>
+                    <div>
+                      <textarea class="col-12 " style="height: 100px; " formControlName="refferencePoint" required> </textarea>
+                    </div>
+                    <br />
+
+                    <mat-label>Do you know anyone studying at WDCTS? </mat-label>
+                    <div>
+                      <textarea class="col-12 " style="height: 100px; " formControlName="anyoneStudyingNow" required> </textarea>
+                    </div>
+                    <br />
+                    <div>
+                      <button mat-button matStepperPrevious class="mr-3">Back</button>
+                      <button mat-raised-button class="WDCTS-button" color="primary" matStepperNext>Next</button>
+                    </div>
+                  </form>
+                </mat-step>
+
+                <mat-step>
+                  <ng-template matStepLabel>Submit</ng-template>
+                  <div>
+                    <p>
+                      I certify that to the best of my knowledge the information provided in this application for Washington D.C. Theological Seminary is accurate. I fully understand that if this information or any other information upon which my admission is based is found
+                      to be inaccurate or incomplete, WDCTS may rescind my application or degree. If I am approved for admission and decide to enroll at WDCTS, I agree to abide by the rules and regulations of the institution as stated
+                      in the Academic Catalog."
+                    </p>
+                    <mat-radio-button value="Agree"> Agree </mat-radio-button> <br /> <br />
+                    <a mat-raised-button color="primary" routerLink="/thank-you" class="submitbutton WDCTS-button" (click)="onSubmit()">Submit</a>
+                  </div>
+                </mat-step>
+            </mat-horizontal-stepper>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
