@@ -10,17 +10,14 @@ export class AdminPageComponent implements OnInit {
 
   constructor(public ordersService: PolicyService) { }
 
-  ngOnInit() { this.getZtsForms(); }
+  ngOnInit() { this.getChatgiEntries(); }
 
-  ztsForms;
-  getZtsForms = () =>
+  chatgiEntries;
+  getChatgiEntries = () =>
     this.ordersService
-      .getZtsForms()
-      .subscribe(res => (this.ztsForms = res));
+      .getChatgiEntries()
+      .subscribe(res => (this.chatgiEntries = res));
 
-  headElements = ['firstName', 'middleName', 'lastName', 'Email', 'AddressOne',
-    'City', 'State', 'Country', 'ChurchLeadership', 'EnglishProficiency', 'OtherLanguage', 'PhoneNumber', 'Gender', 'EthnicDetail', 'Ethnic',
-    'Occupation', 'MaritalStatus', 'SpecialAccomidations', 'SpecialAccomidationsExplain',
-    'PreviousConviction', 'PreviousConvicationExplain', 'DateofBirth', 'AddressTwo', 'Denomnination', 'ChurchName', 'Churchsize', 'ChurchRole', 'CountryTwo', 'Church Location', 'AttendanceLength',
-    'StatementPurpose', 'InternetAccess', 'refferencePoint', 'anyoneStudyingNow', 'yearsofbeingabeliever', 'CountryCitizenship'];
+  headElements = ['Saint First Name', 'Saint Last Name', 'Chatgi Name',
+     'Gender', 'Phone Number', 'State', 'City', 'Strategy', 'Event Name', 'Chatgi Catigory'];
 }

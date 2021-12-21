@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'ZTS-forms'`, () => {
+  it(`should have as title 'chatgi-organization'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('ZTS-forms');
+    expect(app.title).toEqual('chatgi-organization');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('ZTS-forms app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('chatgi-organization app is running!');
   });
 });

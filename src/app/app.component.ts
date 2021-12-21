@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = "ZTS-Forms"
+  title = "chatgi-organization-admin"
 }
